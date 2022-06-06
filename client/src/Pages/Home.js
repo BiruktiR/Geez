@@ -4,7 +4,7 @@ import Price from "../components/Price";
 import Services from "../components/Services";
 import Slider from "../components/Slider";
 import Team from "../components/Team";
-//import Blog from "../components/Blog";
+import Blog from "../components/Blog";
 //import Counter from "../components/Counter";
 import Cta from "../components/Cta";
 import About from "../components/About";
