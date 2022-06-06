@@ -1,8 +1,10 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 // this is contact page 
 function ContactForm () {
   return (
+
     <section className='contact-form-wrap section'>
       <div className='container'>
         <Fade bottom>
@@ -13,6 +15,7 @@ function ContactForm () {
                 <div id='map'>
                   <iframe
                     className='w-100 border-0'
+                    
                     src="https://www.google.com/maps/place/Robe/@7.1168611,39.9858138,14z/data=!3m1!4b1!4m5!3m4!1s0x17ca022eb0941543:0xec6efd09bd5f02e4!8m2!3d7.1199031!4d40.0068953" 
                     width='600'
                     height='450'
