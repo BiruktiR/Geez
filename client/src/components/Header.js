@@ -55,7 +55,7 @@ function Header () {
               <div className='header-top-info'>
                 <a href='tel:+23-345-67890'>
                   <FaPhone className='mr-2' />
-                  <span>+251 11 127 5737</span>
+                  <span>+251 929346892</span>
                 </a>
                 <a href='/'>
                   <FaEnvelope className='mr-2' />
