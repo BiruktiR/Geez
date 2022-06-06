@@ -34,7 +34,7 @@ function Slider () {
         <Container className='row align-items-center bg-primary p-2 p-sm-3 rounded'>
           <Grid container justifyContent="center">
             <Grid item sm={12} md={12} lg={8}>
-            <Typography variant='p' color="white" className='text-white-25'>
+            <Typography variant='p' color="black" className='text-white-25'>
             Geʽez is an ancient Ethiopian Semitic language. The language originates from what is now northern Ethiopia and Eritrea.
                   </Typography>
             </Grid>

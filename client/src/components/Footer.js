@@ -24,7 +24,7 @@ function Footer () {
                 Addis Ababa , Ethiopia
               </p>
               <a href='/'>
-                <span className='text-white h4'>+251 11 127 5737</span>
+                <span className='text-white h4'>+251 929346892</span>
               </a>
             </div>
           </div>
@@ -35,13 +35,13 @@ function Footer () {
 
               <ul className='list-unstyled footer-menu lh-35'>
                 <li>
-                  <a href='/'>About</a>
+                  <a href='/about'>About</a>
                 </li>
                 <li>
-                  <a href='/'>Courses</a>
+                  <a href='/courses'>Courses</a>
                 </li>
                 <li>
-                  <a href='/'>Contact</a>
+                  <a href='/contact'>Contact</a>
                 </li>
               </ul>
             </div>
