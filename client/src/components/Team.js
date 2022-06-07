@@ -16,7 +16,7 @@ const teams = [
   },
   {
     src: team2,
-    title: 'traditional mesemhere geez',
+    title: 'traditional mesetmhere geez',
     name: 'Yeneta'
   },
   {

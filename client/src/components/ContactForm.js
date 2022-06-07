@@ -34,7 +34,7 @@ function ContactForm () {
                   with us for any kind of information <br />
                   
                 </p>
-                <h2 className='mb-3'>+251 11 126 5737</h2>
+                <h2 className='mb-3'>+251 929346892</h2>
                 <h3 className = "mb-3"> Addis Ababa, Ethiopia</h3>
 
                 <p>
