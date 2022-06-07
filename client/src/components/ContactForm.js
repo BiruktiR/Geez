@@ -1,28 +1,42 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 // this is contact page 
-function ContactForm () {
-  return (
+export default function ContactForm() {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
 
+  if (!isLoaded) return <div>Loading...</div>;
+  return <Map />;
+}
+function Map() {
+   const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+  return (
+    <>
+     <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
+      <Marker position={center} />
+    </GoogleMap>
     <section className='contact-form-wrap section'>
       <div className='container'>
         <Fade bottom>
           <div className='row align-items-center bg-gray'>
             <div className='col-lg-6 col-md-12 col-sm-12'>
               <div className='google-map'>
-                
+              
                 <div id='map'>
-                  <iframe
+                  <iframe  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMrH5mCFY1uZ2YH-lE-Ho4AsACkh5JvEg" target="_parent"
+                  
                     className='w-100 border-0'
                     
-                    src="https://www.google.com/maps/place/Robe/@7.1168611,39.9858138,14z/data=!3m1!4b1!4m5!3m4!1s0x17ca022eb0941543:0xec6efd09bd5f02e4!8m2!3d7.1199031!4d40.0068953" 
+                    //src="https://www.google.com/maps/place/Robe/@7.1168611,39.9858138,14z/data=!3m1!4b1!4m5!3m4!1s0x17ca022eb0941543:0xec6efd09bd5f02e4!8m2!3d7.1199031!4d40.0068953" 
                     width='600'
                     height='450'
                     allowFullScreen=''
                     title='map'
                     loading='lazy'
-                  ></iframe>
+                  >//</iframe>
                 </div>
               </div>
             </div>
@@ -107,7 +121,8 @@ function ContactForm () {
         </Fade>
       </div>
     </section>
+  </>
   )
 }
 
-export default ContactForm
+//export default ContactForm
