@@ -103,7 +103,7 @@ function Blog () {
                   <Box className='p-4'>
                     <Box className='d-flex w-100 justify-content-between'>
                     
-                      <span>Ancient L</span>
+                      <span>Ancient literature</span>
                     </Box>
                       <a href='blog-single.html'>
                           <Typography variant='h3'>
