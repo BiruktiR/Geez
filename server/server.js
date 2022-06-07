@@ -14,6 +14,7 @@ const express = require("express");
 const app = express();
 const connectDB=require('./config/db');
 const errorHandler= require('./middleware/error');
+const routesHandler=require('./routes/handler')
 const cors=require('cors');
 //connect Db
 connectDB();
@@ -28,7 +29,7 @@ app.get("/", (req, res, next) => {
 });
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/private", require("./routes/private"));
-
+app.use('/', routesHandler);
 //Error handler  should be last piece of middleware 
 app.use(errorHandler);
 

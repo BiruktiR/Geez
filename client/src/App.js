@@ -17,7 +17,8 @@ import Services from './Pages/Services'
 import Contact from './Pages/Contact'
 import Login from'./Pages/Login'
 import Register from'./Pages/Register'
-//import Dashboard from "./Pages/Dashboard/Dashboard";
+import Dashboard from "./Pages/Dashboard";
+import Continue from './Pages/Continue';
 
 
 function App () {
@@ -34,22 +35,24 @@ function App () {
             <Route path='/about'>
               <About />
             </Route>
-            {/* <Route path='/dashboard'>
+              <Route path='/dashboard'>
               <Dashboard />
-            </Route> */}
+            </Route>  
             <Route path='/services'>
               <Services />
             </Route>
             <Route path='/contact'>
               <Contact />
             </Route>
+            <Route path= '/continue'>
+              <Continue/>
+              </Route>
              <PrivateRoute exact path="/" component={PrivateScreen} />
             <Route path='/login'>
               <Login/>
             </Route>
             <Route path='/register'>
               <Register/>
-
             </Route>
               
             <Route path='/forgotpassword'>

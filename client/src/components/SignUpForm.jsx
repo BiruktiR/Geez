@@ -101,8 +101,8 @@ export default function SignUp( { name,  setName,email, setEmail ,password, setP
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
-                  Already have an account? Sign in
-                </Link>
+                  Already have an account? <Link to="/login">Login</Link> 
+                  </Link>
               </Grid>
             </Grid>
           </Box>

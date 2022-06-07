@@ -45,7 +45,6 @@ const Register = () => {
             );
             console.log("token----", data)
 
-           
 
             history.push("/login");
         } catch (error) {
@@ -99,6 +98,7 @@ const Register = () => {
                 setConfirmPassword={setConfirmPassword}
 
                 registerUser={registerHandler}
+                
             />
 
             {/* <div>

@@ -58,7 +58,7 @@ const Login = () => {
         config
       );
      // localStorage.setItem("authToken", data.token);
-      history.push("/courses");
+      history.push("/dashboard");
     } catch (error) {
       console.log("--------->",error)
       setError(error.message);
