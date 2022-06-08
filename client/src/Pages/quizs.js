@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../quizimg/logo.jpg";
+import "../quizimg/quiz.css";
 
 function QuizS() {
   // Properties
