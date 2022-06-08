@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useEffect,useState} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,14 +7,28 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
+import Content from './Content';
+
 //import blog3 from '../../assets/images/img3.jpg';
 
 import data from '../Pages/Data/course-mock.json';
 
 export default function CourseCard() {
+
+  useEffect(()=>{
+    fetchItems();
+      },[]);
+      const [items,setItems]=useState([]);
+
+      const fetchItems=async()=>{
+          const data = await fetch('/continue');
+          const items = await data.json();
+          setItems(items);
+      };
+
   return (
     <>
-    {data.map((value) => {
+    {items.map((value) => {
 
       return (
         <Grid item xs={6}  md={4}>
@@ -23,18 +37,19 @@ export default function CourseCard() {
             component="img"
             alt="courseIamge"
             height="140"
-  //          image={blog3}
+           image={value.image}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {value.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {value.content}
-            </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Continue</Button>
+            <Button 
+            size="small"
+            onClick={<Content content={value.content} title={value.title}/>}
+
+            >Continue</Button>
           </CardActions>
         </Card>
       </Grid>
