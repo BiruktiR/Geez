@@ -2,6 +2,7 @@ import React from 'react'
 import Fade from 'react-reveal/Fade';
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import Location from './Location';
 // this is contact page 
 export default function ContactForm() {
   const { isLoaded } = useLoadScript({
@@ -15,6 +16,7 @@ function Map() {
    const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
   return (
     <>
+    <Location/>
      <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
       <Marker position={center} />
     </GoogleMap>
@@ -27,7 +29,7 @@ function Map() {
               
                 <div id='map'>
                   <iframe  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMrH5mCFY1uZ2YH-lE-Ho4AsACkh5JvEg" target="_parent"
-                  
+          
                     className='w-100 border-0'
                     
                     //src="https://www.google.com/maps/place/Robe/@7.1168611,39.9858138,14z/data=!3m1!4b1!4m5!3m4!1s0x17ca022eb0941543:0xec6efd09bd5f02e4!8m2!3d7.1199031!4d40.0068953" 
