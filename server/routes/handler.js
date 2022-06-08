@@ -3,11 +3,6 @@ const express =require ('express');
 
  router.get ('/continue',(req ,res)=>{
      const Courses =[
-         {
-             "image":"history",
-             "title":"hello",
-             "content":"hiidjknd\ansdjna"
-         },
     {
       "image": 1,
       "title": "የግእዝ ቋንቋ ታሪክና አመጣጥ ክፍል ፩(1) የግእዝ ቋንቋ ታሪክና አመጣጥክፍል ፪(2)",
